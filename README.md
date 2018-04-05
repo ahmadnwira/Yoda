@@ -1,2 +1,2 @@
 # Yoda
-the wise static generator 
+the wise static site generator
