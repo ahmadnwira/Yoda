@@ -1,18 +1,12 @@
 import os
 from misaka import html
-from jinja2 import Environment, FileSystemLoader
 from yaml import load
+from theme import INDEX_TEMPLATE, POST_TEMPLATE
 
 BASE_DIR = os.getcwd()
 POSTS_DIR = os.path.join(BASE_DIR, 'posts')
 HTML_DIR = os.path.join(BASE_DIR, 'html')
-THEME_DIR = os.path.join(BASE_DIR, 'theme')
 PROJECT_TITLE = 'Yoda'
-
-env = Environment(loader=FileSystemLoader(THEME_DIR))
-
-POST_TEMPLATE = env.get_template('post.html')
-INDEX_TEMPLATE = env.get_template('index.html')
 
 
 def _convert_filename(file_name, new_ext=".html"):
